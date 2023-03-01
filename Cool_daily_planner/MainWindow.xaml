@@ -1,0 +1,94 @@
+﻿<Window x:Class="Cool_daily_planner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cool_daily_planner"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="10*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="8">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF81B0DE"/>
+                    <GradientStop Color="#FFE6E6E6" Offset="0.578"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="DayNow" Text="Заметки на " Grid.Column="0" Grid.Row="0" FontSize="24" TextAlignment="Center" FontFamily="Gabriola" Background="#FF81B0DE"/>
+        <TextBlock Text="Доступные возможности" Grid.Column="1" Grid.Row="0" FontSize="24" TextAlignment="Center" FontFamily="Gabriola"/>
+        <Button x:Name="NextDay" Grid.Column="1" Grid.Row="3" Content="Следующий день" FontFamily="Gabriola" FontSize="18" Click="Next_day"/>
+        <Button x:Name="BeforDay" Grid.Column="1" Grid.Row="4" Content="Предыдущий день" FontFamily="Gabriola" FontSize="18" Click="Day_befor"/>
+        <Button x:Name="NewZametka" Grid.Column="1" Grid.Row="5" Content="Добавить новую запись" FontFamily="Gabriola" FontSize="18" Click="new_zametka"/>
+        <Button x:Name="NewInformation" Grid.Column="1" Grid.Row="6" Content="Добавить пункт в запись" FontFamily="Gabriola" FontSize="18" IsEnabled="False" Click="New_iforming"/>
+        <Button x:Name="Delet" Grid.Column="1" Grid.Row="7" Content="Удалить запись" FontFamily="Gabriola" FontSize="18" Click="DeletZap"/>
+        <Calendar x:Name="Kalendar" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Foreground="#FFA3BDF4" Height="171" FontFamily="Comic Sans MS" Width="172" FontSize="16" SelectedDatesChanged="Vibor_Dati">
+            <Calendar.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA3AEB9"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FFA6D7FC" Offset="1"/>
+                </LinearGradientBrush>
+            </Calendar.BorderBrush>
+        </Calendar>
+        <TextBox x:Name="Pole_vvoda" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" IsEnabled="False"/>
+        <StackPanel Grid.Row="1">
+            <Button x:Name="TextBottom1" VerticalAlignment="Top" Grid.Row="1"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom2" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text2" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom3" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text3" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom4" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text4" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom5" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text5" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom6" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text6" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom7" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text7" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom8" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text8" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom9" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text9" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom10" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text10" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom11" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text11" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+            <Button x:Name="TextBottom12" VerticalAlignment="Top" Grid.Row="2"  Height="24" Background="{x:Null}" Click="VivediText">
+                <TextBlock x:Name="text12" HorizontalAlignment="Left" VerticalAlignment="Center" Text="" Width="460"/>
+            </Button>
+        </StackPanel>
+        <TextBlock x:Name="spisokchitay" Grid.Row="2" Grid.RowSpan="6" Text="POSMOTRI" HorizontalAlignment="Stretch"/>
+    </Grid>
+</Window>
+    
+    
+    
+    
